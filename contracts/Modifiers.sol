@@ -10,7 +10,7 @@ abstract contract Modifiers is Storage, Events {
 
     modifier isListingActive(uint256 listingId) {
         if (listings[listingId].status != ListingStatus.Active) {
-            revert OfferDoesNotExist(); // یا هر ارور مناسب دیگر
+            revert OfferDoesNotExist(); 
         }
         _;
     }
